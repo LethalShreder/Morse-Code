@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+
+<body>
+<h1>Morse Code</h1>
+<h2>Convert Morse Code To And From English</h2>
+
+<script type="text/javascript">
+// Morse Code to English - JavaScript Document
+//In use at lethalshreder.co.uk/code/morse-code.php
+function engMorse() {
+	var tex1 = document.getElementById("inp").value;
+	var tex2 = document.getElementById("outp");
+	
+	
+	var nStr = tex1.split("").join(" ");
+	nStr = nStr.replace(/a/gi, ".-").replace(/b/gi, "-...").replace(/c/gi, "-.-.").replace(/d/gi, "-..").replace(/e/gi, ".").replace(/f/gi, "..-.").replace(/g/gi, "--.").replace(/h/gi, "....").replace(/i/gi, "..").replace(/j/gi, ".---").replace(/k/gi, "-.-").replace(/l/gi, ".-..").replace(/m/gi, "--").replace(/n/gi, "-.").replace(/o/gi, "---").replace(/p/gi, ".--.").replace(/q/gi, "--.-").replace(/r/gi, ".-.").replace(/s/gi, "...").replace(/t/gi, "-").replace(/u/gi, "..-").replace(/v/gi, "...-").replace(/w/gi, ".--").replace(/x/gi, "-..-").replace(/y/gi, "-.--").replace(/z/gi, "--..");
+	tex2.value = nStr;
+}
+function morseEng() {
+	var tex1 = document.getElementById("inp").value;	//'inp' is the ID for a textbox the user uses to input data.
+	var tex2 = document.getElementById("outp");			//'outp' is the ID for a textbox that displays the output.
+	
+	
+	//'[letter/symbol]m' is that and then it in morse code.
+	
+	var am = (".-");
+	var bm = ("-...");
+	var cm = ("-.-.");
+	var dm = ("-..");
+	var em = (".");
+	var fm = ("..-.");
+	var gm = ("--.");
+	var hm = ("....");
+	var im = ("..");
+	var jm = (".---");
+	var km = ("-.-");
+	var lm = (".-..");
+	var mm = ("--");
+	var nm = ("-.");
+	var om = ("---");
+	var pm = (".--.");
+	var qm = ("--.-");
+	var rm = (".-.");
+	var sm = ("...");
+	var tm = ("-");
+	var um = ("..-");
+	var vm = ("...-");
+	var wm = (".--");
+	var xm = ("-..-");
+	var ym = ("-.--");
+	var zm = ("--..");
+	var comm = ("--..--");
+	var fsm = (".-.-.-");
+	var exm = ("-.-.--");
+	var questm = ("..--..");
+	var lbrackm = ("-.--.");
+	var rbrackm = ("-.--.-");
+	var andm = (".-...");
+	var dollarm = ("...-..-");
+	var forslashm = ("-..-.");
+	var equalm = ("-...-");
+	var plusm = ("-....-");
+	var minusm = (".-.-.");
+	
+	//Variable 'newStr' = the characters in textbox 1 ('inp') will be replaced by the following.
+	//.replace(/ /g, "") MEANS what is in '/ /' globally (whole string), the 'g', will get replaced by the following '""'.
+	//.replace(RegExp(am, "g"), "a") MEANS that it will find the variable globally and it will get replaced by the following letter.
+	
+	var newStr = tex1.replace(RegExp(am, "g"), "a").replace(RegExp(bm, "g"), "b").replace(RegExp(cm, "g"), "c").replace(RegExp(dm, "g"), "d").replace(RegExp(em, "g"), "e").replace(RegExp(fm, "g"), "f").replace(RegExp(gm, "g"), "g").replace(RegExp(hm, "g"), "h").replace(RegExp(im, "g"), "i").replace(RegExp(jm, "g"), "j").replace(RegExp(km, "g"), "k").replace(RegExp(lm, "g"), "l").replace(RegExp(mm, "g"), "m").replace(RegExp(nm, "g"), "n").replace(RegExp(om, "g"), "o").replace(RegExp(pm, "g"), "p").replace(RegExp(qm, "g"), "q").replace(RegExp(rm, "g"), "r").replace(RegExp(sm, "g"), "s").replace(RegExp(tm, "g"), "t").replace(RegExp(um, "g"), "u").replace(RegExp(vm, "g"), "v").replace(RegExp(wm, "g"), "w").replace(RegExp(xm, "g"), "x").replace(RegExp(ym, "g"), "y").replace(RegExp(zm, "g"), "z").replace(RegExp(comm,"g"), ",").replace(RegExp(fsm,"g"), ".").replace(RegExp(exm,"g"), "!").replace(RegExp(questm,"g"), "?").replace(RegExp(lbrackm,"g"), "(").replace(RegExp(rbrackm,"g"), ")").replace(RegExp(andm,"g"), "&").replace(RegExp(dollarm,"g"), "$").replace(RegExp(forslashm,"g"), "/").replace(RegExp(equalm,"g"), "=").replace(RegExp(plusm,"g"), "+").replace(RegExp(minusm,"g"), "-");
+	newStr = newStr.split(" ").join("").split("  ").join(" ");
+	
+	tex2.value = newStr;
+}
+</script>
+
+<textarea name="inp" class="StyleTxtField" id="inp"></textarea><br><br>
+
+<textarea name="outp" disabled="disabled" class="StyleTxtField" id="outp"></textarea><br><br>
+
+<input type="submit" class="button" value="English to Morse Code" onClick="engMorse()" style="margin-right: 310px">
+<input type="submit" class="button" value="Morse Code to English" onClick="morseEng()">
+MC-English currently doesn't work.
+
+<p>Please do NOT use punctuation when converting to Morse Code.<br>
+Please ONLY use ".", "-" and " " when converting to English.</p>
+ddfgd
+</body>
+</html>
