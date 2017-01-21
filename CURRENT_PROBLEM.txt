@@ -1,0 +1,3 @@
+The current problem is that I can't get the Morse Code to get converted back into text (English).
+I can get text (English) to get converted into Morse Code with no problem but not the way back.
+For example, try ".... .-". It would meant to convert to "ha" but for me it displays "ie".
